@@ -17,5 +17,12 @@ namespace PartyInvites.Controllers
             return View();
         }
 
+        public ViewResult RsvpFrom()
+        {
+            return View();
+            //no argument: telling MVC to show the default view having same name with this action
+            //In this case, RsvpFrom.cshtml
+        }
+
     }
 }
