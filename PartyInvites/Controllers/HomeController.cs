@@ -14,6 +14,13 @@ namespace PartyInvites.Controllers
         {
             int hour = DateTime.Now.Hour;
             ViewBag.Greeting = hour < 12 ?"Good Morning" : "Good Afternoon";
+            return View("MyView");
+        }
+
+        public ViewResult MyView()//Answer to every request
+        {
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
             return View();
         }
 
@@ -23,6 +30,5 @@ namespace PartyInvites.Controllers
             //no argument: telling MVC to show the default view having same name with this action
             //In this case, RsvpFrom.cshtml
         }
-
     }
 }
