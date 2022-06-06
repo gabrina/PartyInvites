@@ -10,9 +10,11 @@ namespace PartyInvites.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ViewResult Index()//Answer to every request
         {
-            return "Hello World!";
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ?"صبح بخیر" : "عصر بخیر";
+            return View();
         }
 
     }
