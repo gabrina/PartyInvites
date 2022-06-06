@@ -13,7 +13,7 @@ namespace PartyInvites.Controllers
         public ViewResult Index()//Answer to every request
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ?"صبح بخیر" : "عصر بخیر";
+            ViewBag.Greeting = hour < 12 ?"Good Morning" : "Good Afternoon";
             return View();
         }
 
